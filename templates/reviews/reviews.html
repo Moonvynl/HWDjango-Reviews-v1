@@ -1,0 +1,11 @@
+{% extends 'reviews/base.html' %}
+{% block content %}
+<div class="container">
+<h1>Reviews</h1>
+<ul class="list-group">
+    {% for review in reviews %}
+        <li class="list-group-item">{{review.username}}<br>{{review.text}} <br>{{review.date}}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
